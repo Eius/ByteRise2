@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Menu from "./partials/Menu.svelte";
+	import DesktopMenu from "./partials/DesktopMenu.svelte";
     import Logo from "./partials/Logo.svelte";
 
 </script>
@@ -9,6 +9,6 @@
         <div class="text-6xl md:text-8xl lg:text-9xl py-12 md:py-16 lg:py-20">
             <Logo />
         </div>
-        <Menu />
+        <DesktopMenu />
     </div>
 </div>

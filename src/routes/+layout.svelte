@@ -11,6 +11,7 @@
 	/* Components */
 	import NavHeader from "$lib/components/layout/NavHeader.svelte";
 	import StickyBanner from "$lib/components/layout/StickyBanner.svelte";
+	import CompactMenuSidebar from "$lib/components/layout/partials/CompactMenuSidebar.svelte";
 </script>
 
 <svelte:head>
@@ -20,6 +21,7 @@
 <div class="app">
 	<StickyBanner />
 	<NavHeader />
+	<CompactMenuSidebar />
 	<main>
 		<slot />
 	</main>
