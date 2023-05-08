@@ -13,3 +13,8 @@ export interface PartialPostData {
 export interface PostData extends PartialPostData {
     content: string;
 }
+
+export interface FeaturedPostData {
+    title: string;
+    slug: string;
+}

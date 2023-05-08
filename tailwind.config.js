@@ -34,9 +34,8 @@ export default {
     },
     fontFamily: {
       "logo": ["vt323", "ui-sans-serif", "system-ui", "-apple-system"],
-      "mono": ["Roboto Mono", "ui-sans-serif", "system-ui", "-apple-system"],
-      "sans": ["Roboto", "ui-sans-serif", "system-ui", "-apple-system"],
       "title": ["Figtree", "ui-sans-serif", "system-ui", "-apple-system"],
+      "sans": ["Roboto", "ui-sans-serif", "system-ui", "-apple-system"],
     },
     screens: {
       "sm": "596px",
