@@ -24,7 +24,7 @@ import BigArticle from "$lib/components/articles/BigArticle.svelte";
         </div>
         <div class="flex flex-col gap-6 col-span-1 -order-1 lg:order-1">
             <Featured />
-            <div class="sticky top-16 flex flex-col gap-6">
+            <div class="lg:sticky lg:top-16 flex flex-col gap-6">
                 <TagContainer />
                 <AdSpace />
             </div>
