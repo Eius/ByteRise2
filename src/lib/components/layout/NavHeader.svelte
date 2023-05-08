@@ -12,3 +12,4 @@
         <DesktopMenu />
     </div>
 </div>
+<img src="/steps.svg" alt="Steps background" height="100" width="2000">

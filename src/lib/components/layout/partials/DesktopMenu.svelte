@@ -1,26 +1,5 @@
 <script lang="ts">
-    const menuItems = [
-        {
-            name: "SvelteKit",
-            href: "/tag/svelte",
-        },
-        {
-            name: "Django",
-            href: "/tag/django",
-        },
-        {
-            name: "JavaScript",
-            href: "/about/tag/javascript",
-        },
-        {
-            name: "Web Development",
-            href: "/about/tag/javascript",
-        },
-        {
-            name: "Unreal Engine",
-            href: "/tag/gamedev",
-        },
-    ];
+    import {menuItems} from "$lib/scripts/data/Menu";
 </script>
 
 <ul class="flex flex-row justify-between text-white">
@@ -32,7 +11,7 @@
 </ul>
     
 <style lang="postcss">
-    li::after {
+    li::after, li::before {
         content: "";
         display: block;
         position: absolute;
@@ -44,10 +23,15 @@
 
     li::after {
         bottom: -1px;
-        left: 0;
+        left: 50%;
     }
 
-    a:hover li::after {
-        width: 100%;
+    li::before {
+        bottom: -1px;
+        right: 50%;
+    }
+
+    a:hover li::after, a:hover li::before {
+        width: 50%;
     }
 </style>

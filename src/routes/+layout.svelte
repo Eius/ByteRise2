@@ -1,6 +1,6 @@
 <script lang="ts">
 	import "../app.css";
-	import "$lib/styles/global.css"
+	import "$lib/styles/global.postcss"
 
 	/* Fonts */
 	import "@fontsource/roboto/300.css";

@@ -7,7 +7,7 @@ import Socials from "./partials/Socials.svelte";
 </script>
 
 <MobileSearch />
-<nav class="bg-primary border-b border-gray-700 sticky top-0 z-50">
+<nav class="bg-primary border-b-none md:border-b border-gray-700 sticky top-0 z-50">
     <div class="container">
         <div class="grid grid-cols-5 items-center">
             <div class="col-span-1 flex justify-start">
