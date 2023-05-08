@@ -1,5 +1,4 @@
 <script lang="ts">
-	import DesktopMenu from "./partials/DesktopMenu.svelte";
     import Logo from "./partials/Logo.svelte";
 
 </script>
@@ -9,7 +8,6 @@
         <div class="text-6xl md:text-8xl lg:text-9xl py-12 md:py-16 lg:py-20">
             <Logo />
         </div>
-        <DesktopMenu />
     </div>
 </div>
-<img src="/steps.svg" alt="Steps background" height="100" width="2000">
+<img src="/steps.svg" alt="Steps background" height="10" width="200" class="w-full">

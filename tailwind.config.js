@@ -6,8 +6,9 @@ export default {
       center: true,
       padding: {
         DEFAULT: '1rem',
-        sm: '2rem',
-        lg: '4rem',
+        sm: '.25rem',
+        md: '.25rem',
+        lg: '2rem',
         xl: '8rem',
         '2xl': '16rem',
       }
@@ -33,7 +34,9 @@ export default {
     },
     fontFamily: {
       "logo": ["vt323", "ui-sans-serif", "system-ui", "-apple-system"],
+      "mono": ["Roboto Mono", "ui-sans-serif", "system-ui", "-apple-system"],
       "sans": ["Roboto", "ui-sans-serif", "system-ui", "-apple-system"],
+      "title": ["Figtree", "ui-sans-serif", "system-ui", "-apple-system"],
     },
     screens: {
       "sm": "596px",

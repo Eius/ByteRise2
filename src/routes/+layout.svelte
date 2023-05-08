@@ -3,15 +3,22 @@
 	import "$lib/styles/global.postcss"
 
 	/* Fonts */
-	import "@fontsource/roboto/300.css";
-	import "@fontsource/roboto/400.css";
-	import "@fontsource/roboto/700.css";
-	import "@fontsource/roboto/900.css";
+	import "@fontsource/roboto-mono/300.css";
+	import "@fontsource/roboto-mono/400.css";
+	import "@fontsource/roboto-mono/500.css";
+	import "@fontsource/roboto-mono/600.css";
+	import "@fontsource/roboto-mono/700.css";
+
+	import "@fontsource/figtree/300.css";
+	import "@fontsource/figtree/400.css";
+	import "@fontsource/figtree/500.css";
+	import "@fontsource/figtree/600.css";
+	import "@fontsource/figtree/700.css";
+	import "@fontsource/figtree/900.css";
 
 	/* Components */
 	import NavHeader from "$lib/components/layout/NavHeader.svelte";
 	import StickyBanner from "$lib/components/layout/StickyBanner.svelte";
-	import CompactMenuSidebar from "$lib/components/layout/partials/CompactMenuSidebar.svelte";
 </script>
 
 <svelte:head>
@@ -21,7 +28,6 @@
 <div class="app">
 	<StickyBanner />
 	<NavHeader />
-	<CompactMenuSidebar />
 	<main>
 		<slot />
 	</main>

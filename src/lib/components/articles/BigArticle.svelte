@@ -5,8 +5,8 @@
     export let postData: PartialPostData;
 </script>
 
-<article class="flex flex-col">
-    <img src={postData.thumbnail} alt={postData.title + " thumbnail"}>
-    <PostMeta metaData={postData.meta} />
-    <h1>{postData.title}</h1>
+<article class="flex flex-col gap-2 pb-4">
+    <img src={postData.thumbnail} alt={postData.title + " thumbnail"} width="600" height="345" class="w-full">
+    <PostMeta meta={postData.meta} />
+    <h1 class="text-lg lg:text-2xl font-semibold font-title">{postData.title}</h1>
 </article>

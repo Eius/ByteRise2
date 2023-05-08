@@ -1,5 +1,4 @@
 <script lang="ts">
-	import CompactMenuButton from "./partials/CompactMenuButton.svelte";
 	import Logo from "./partials/Logo.svelte";
     import MobileSearch from "./partials/MobileSearch.svelte";
     import SearchButton from "./partials/SearchButton.svelte";
@@ -11,7 +10,7 @@ import Socials from "./partials/Socials.svelte";
     <div class="container">
         <div class="grid grid-cols-5 items-center">
             <div class="col-span-1 flex justify-start">
-                <CompactMenuButton />
+                <p>EMPTY</p>
             </div>
             <div class="hidden md:flex col-span-3 justify-center text-white">
                 <Socials />
