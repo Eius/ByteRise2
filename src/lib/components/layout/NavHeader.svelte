@@ -1,4 +1,5 @@
 <script lang="ts">
+    import Steps from "$lib/svg/Steps.svelte";
     import Logo from "./partials/Logo.svelte";
 
 </script>
@@ -10,4 +11,4 @@
         </div>
     </div>
 </div>
-<img src="/steps.svg" alt="Steps background" height="10" width="200" class="w-full">
+<Steps />
