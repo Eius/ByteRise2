@@ -1,4 +1,5 @@
 <script lang="ts">
+	/* CSS */
 	import "../app.css";
 	import "$lib/styles/global.postcss"
 
@@ -14,6 +15,7 @@
 	import NavHeader from "$lib/components/layout/NavHeader.svelte";
 	import StickyBanner from "$lib/components/layout/StickyBanner.svelte";
 	import Footer from "$lib/components/layout/Footer.svelte";
+	import LoggedIn from "$lib/components/layout/LoggedIn.svelte";
 </script>
 
 <svelte:head>
@@ -27,6 +29,7 @@
 		<slot />
 	</main>
 	<Footer />
+	<LoggedIn />
 </div>
 
 <style lang="postcss">

@@ -19,7 +19,7 @@
         timeout = setTimeout(() => {
           i++;
           typeLetter(i, letters);
-        }, Math.floor(Math.random() * 20) + 80); // Generates a random delay between 90 and 120ms
+        }, Math.floor(Math.random() * 20) + 80);
       }
     };
   
@@ -29,9 +29,5 @@
   </script>
   
   <h1 class="text-center text-white font-logo white-nowrap">
-    <a href="/" class="tracking-wider">ㅤ{displayText}ㅤ</a>
+    <a href="/" class="tracking-wider">{displayText}</a>
   </h1>
-  
-  <style>
-    /* Add any necessary styles here */
-  </style>

@@ -4,7 +4,7 @@ import type { FeaturedPostData } from "$lib/scripts/interfaces/PostInterface";
 export const postList:PartialPostData[] = [
     {
         title: "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. In Commodo Nunc Metus. In commodo nunc metus, vel rhoncus tellus porta feugiat",
-        thumbnail: 'https://via.placeholder.com/600x345',
+        thumbnail: 'https://placehold.co/600x345',
         slug: "lorem-ipsum",
         meta: {
             pubDate: "2021-10-10",
@@ -13,7 +13,7 @@ export const postList:PartialPostData[] = [
     },
     {
         title: "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. In Commodo Nunc Metus. In commodo nunc metus, vel rhoncus tellus porta feugiat",
-        thumbnail: 'https://via.placeholder.com/600x345',
+        thumbnail: 'https://placehold.co/600x345',
         slug: "lorem-ipsum",
         meta: {
             pubDate: "2021-10-10",
@@ -22,7 +22,7 @@ export const postList:PartialPostData[] = [
     },
     {
         title: "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. In Commodo Nunc Metus. In commodo nunc metus, vel rhoncus tellus porta feugiat",
-        thumbnail: 'https://via.placeholder.com/600x345',
+        thumbnail: 'https://placehold.co/600x345',
         slug: "lorem-ipsum",
         meta: {
             pubDate: "2021-10-10",
@@ -31,7 +31,7 @@ export const postList:PartialPostData[] = [
     },
     {
         title: "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. In Commodo Nunc Metus. In commodo nunc metus, vel rhoncus tellus porta feugiat",
-        thumbnail: 'https://via.placeholder.com/600x345',
+        thumbnail: 'https://placehold.co/600x345',
         slug: "lorem-ipsum",
         meta: {
             pubDate: "2021-10-10",
@@ -40,7 +40,7 @@ export const postList:PartialPostData[] = [
     },
     {
         title: "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. In Commodo Nunc Metus. In commodo nunc metus, vel rhoncus tellus porta feugiat",
-        thumbnail: 'https://via.placeholder.com/600x345',
+        thumbnail: 'https://placehold.co/600x345',
         slug: "lorem-ipsum",
         meta: {
             pubDate: "2021-10-10",

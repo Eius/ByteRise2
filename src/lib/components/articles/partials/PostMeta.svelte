@@ -37,17 +37,35 @@
 	}
 </script>
 
-<div class="flex flex-wrap text-gray-600 font-title">
+<div class="flex text-gray-700 gap-1">
 	<!-- Metadata Flexbox -->
     <div class="flex items-center">
-        <Icon icon="ic:round-access-time-filled" class="mr-1" />
+		<div class="min-w-[16px] mr-1">
+			<Icon icon="ic:round-access-time-filled" />
+		</div>
 	    <p class="text-xs">{formatDate(new Date(pubDate))}</p>
     </div>
-    <Icon icon="mdi:dot" />
-    <div class="flex items-center">
-        <Icon icon="mdi:tag" class="mr-1" />
-        {#each tags as tag, index}
-        <a href="/tag/{tag}" class="text-xs hover:underline">{tag}{index === (tags.length - 1) ? "" : ","}&nbsp;</a>
-        {/each}
-    </div>
+
+	<div class="min-w-[16px]">
+		<Icon icon="mdi:dot" />
+	</div>
+
+	<div class="flex items-center">
+		<div class="min-w-[16px] mr-1">
+			<Icon icon="mdi:tag" />
+		</div>
+		<ul class="text-xs flex">
+			{#each tags as tag, index}
+					<li class="text-xs">
+						<a href="/tag/{tag}" class="hover:underline">
+							{#if index === 0}
+								{tag}
+							{:else}
+								,&nbsp;{tag}
+							{/if}
+						</a>
+					</li>
+			{/each}
+		</ul>
+	</div>
 </div>

@@ -14,9 +14,9 @@
         {#if index !== 0}
         <Divider />
         {/if}
-        <a href="/post/{post.slug}" class="text-black font-title font-medium">
-            <li>{post.title}</li>
-        </a>
+        <li class="text-black font-title font-medium">
+            <a href="/post/{post.slug}">{post.title}</a>
+        </li>
         {/each}
     </ul>
 </div>
