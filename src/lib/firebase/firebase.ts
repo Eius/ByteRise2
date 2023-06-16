@@ -1,12 +1,12 @@
 import { deleteApp, getApp, getApps, initializeApp } from "firebase-admin/app";
 
 const FIREBASE_CONFIG = {
-  apiKey: import.meta.env.VITE_APIKEY,
-  authDomain: import.meta.env.AUTHDOMAIN,
-  projectId: import.meta.env.PROJECTID,
-  storageBucket: import.meta.env.STORAGEBUCKET,
-  messagingSenderId: import.meta.env.MESSAGINGSENDERID,
-  appId: import.meta.env.APPID,
+  apiKey: "AIzaSyA6figQ8PNPJMBaRffMH6p6njtffeJu2K8",
+  authDomain: "byterise-db.firebaseapp.com",
+  projectId: "byterise-db",
+  storageBucket: "byterise-db.appspot.com",
+  messagingSenderId: "204219912404",
+  appId: "1:204219912404:web:03472d25c0584ca898eb41",
 };
 
 // Initialize Firebase
