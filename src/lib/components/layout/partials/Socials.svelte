@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Icon from "@iconify/svelte";
-    import {socials} from "$lib/scripts/data/Socials";
+    import {socials} from "$lib/data/Socials";
 </script>
 
 {#each socials as {icon, url}}

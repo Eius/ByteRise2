@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { PartialPostData } from "$lib/scripts/interfaces/PostInterface";
+	import type { PartialPostData } from "$lib/interfaces/postInterface";
     import PostMeta from "./partials/PostMeta.svelte";
 
     export let postData: PartialPostData;

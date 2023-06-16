@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.container-fluid {
+    @apply px-4;
+    @apply mx-auto;
+}

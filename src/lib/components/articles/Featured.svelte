@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { featuredPosts } from "$lib/scripts/data/Posts";
+    import { featuredPosts } from "$lib/data/Posts";
 	import Divider from "./partials/Divider.svelte";
 </script>
 

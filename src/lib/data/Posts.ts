@@ -1,5 +1,5 @@
-import type { PartialPostData } from "$lib/scripts/interfaces/PostInterface";
-import type { FeaturedPostData } from "$lib/scripts/interfaces/PostInterface";
+import type { PartialPostData } from "$lib/interfaces/postInterface";
+import type { FeaturedPostData } from "$lib/interfaces/postInterface";
 
 export const postList:PartialPostData[] = [
     {

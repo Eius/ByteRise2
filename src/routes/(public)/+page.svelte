@@ -1,13 +1,13 @@
 <script lang="ts">
     /* Components */
-	import AdSpace from "$lib/components/ads/AdSpace.svelte";
-import BigArticle from "$lib/components/articles/BigArticle.svelte";
+	import MoneyMakingSpace from "$lib/components/moneymaking/MoneyMakingSpace.svelte";
+    import BigArticle from "$lib/components/articles/BigArticle.svelte";
 	import Featured from "$lib/components/articles/Featured.svelte";
 	import NormalArticle from "$lib/components/articles/NormalArticle.svelte";
 	import TagContainer from "$lib/components/articles/TagContainer.svelte";
 	import Divider from "$lib/components/articles/partials/Divider.svelte";
 
-    import {postList} from "$lib/scripts/data/Posts";
+    import {postList} from "$lib/data/Posts";
 </script>
 
 <div class="container">
@@ -26,7 +26,7 @@ import BigArticle from "$lib/components/articles/BigArticle.svelte";
             <!-- <Featured /> -->
             <div class="lg:sticky lg:top-16 flex flex-col gap-6">
                 <TagContainer />
-                <!-- <AdSpace /> -->
+                <MoneyMakingSpace />
             </div>
         </div>
     </div>

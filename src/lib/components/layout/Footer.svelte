@@ -1,6 +1,6 @@
 <script lang="ts">
 	import StepsFlipped from "$lib/svg/StepsFlipped.svelte";
-    import {socials} from "$lib/scripts/data/Socials";
+    import {socials} from "$lib/data/Socials";
 
     interface Link {
         name: string;

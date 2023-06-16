@@ -1,5 +1,5 @@
 <script lang="ts">
-    import {allTags} from "$lib/scripts/data/Tags";
+    import {allTags} from "$lib/data/Tags";
 </script>
 
 <div class="flex flex-col gap-2">

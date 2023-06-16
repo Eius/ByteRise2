@@ -1,36 +1,9 @@
 <script lang="ts">
 	/* CSS */
 	import "../app.css";
-	import "$lib/styles/global.postcss"
 
-	/* Fonts */
-	import "@fontsource/figtree/300.css";
-	import "@fontsource/figtree/400.css";
-	import "@fontsource/figtree/500.css";
-	import "@fontsource/figtree/600.css";
-	import "@fontsource/figtree/700.css";
-	import "@fontsource/figtree/900.css";
+    /* Other */
 
-	/* Components */
-	import NavHeader from "$lib/components/layout/NavHeader.svelte";
-	import StickyBanner from "$lib/components/layout/StickyBanner.svelte";
-	import Footer from "$lib/components/layout/Footer.svelte";
-	import LoggedIn from "$lib/components/layout/LoggedIn.svelte";
 </script>
 
-<svelte:head>
-	<title>ByteRise | Join the ByteSide</title>
-</svelte:head>
-
-<div class="app">
-	<StickyBanner />
-	<NavHeader />
-	<main>
-		<slot />
-	</main>
-	<Footer />
-	<LoggedIn />
-</div>
-
-<style lang="postcss">
-</style>
+<slot />

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Icon from "@iconify/svelte";
-    import { showSearch } from "$lib/scripts/stores/ShowElements";
+    import { showSearch } from "$lib/stores/visibilityStore";
 	import SearchForm from "./SearchForm.svelte";
 </script>
 

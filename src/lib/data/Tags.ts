@@ -1,7 +1,5 @@
 export const allTags: string [] = [
     "SvelteKit",
-    "Django",
-    "JavaScript",
-    "Web Development",
+    "Blender",
     "Unreal Engine",
 ];
