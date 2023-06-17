@@ -10,7 +10,6 @@ export default {
         md: '1rem',
         lg: '2rem',
         xl: '8rem',
-        '2xl': '16rem',
       }
     },
     fontFamily: {

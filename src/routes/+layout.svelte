@@ -12,7 +12,7 @@
 	<title>ByteRise | Join the ByteSide</title>
 </svelte:head>
 
-<div class="app min-h-[200vh] flex flex-col bg-gradient-to-bl from-base-200 to-base-100">
+<div class="app min-h-screen flex flex-col bg-gradient-to-bl from-base-200 from-20% to-base-100">
     <Header />
 	<main class="flex-grow">
 		<slot />

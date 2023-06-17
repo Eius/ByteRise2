@@ -28,6 +28,6 @@
     });
 </script>
   
-<a href="/" class="tracking-wider text-secondary-focus text-center text-5xl font-logo white-nowrap btn btn-ghost">
+<a href="/" class="-ml-6 tracking-wider text-secondary-focus text-center text-5xl font-logo white-nowrap btn btn-lg btn-ghost">
   {displayText}‎
 </a>

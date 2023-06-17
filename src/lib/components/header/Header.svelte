@@ -12,7 +12,7 @@
 
 </script>
 
-<header class="container-fluid py-2 flex items-center">
+<header class="container-fluid py-4 flex items-center">
     <div>
         <DynamicLogo />
     </div>
