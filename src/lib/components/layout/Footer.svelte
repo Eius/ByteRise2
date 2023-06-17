@@ -53,7 +53,7 @@
                     <span class="font-logo">BYTERISE.DEV 2023</span>
                 </a>
             </h1>
-            <!-- <p class="p-0 max-w-md">
+            <!-- <p class="p-0 max-w-md"> 
                 This site uses no tracking or cookies, 
                 other than privacy-respecting, 
                 GDPR-compliant analytics via
