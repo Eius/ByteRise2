@@ -53,16 +53,16 @@
                     <span class="font-logo">BYTERISE.DEV 2023</span>
                 </a>
             </h1>
-            <p class="p-0 max-w-md">
+            <!-- <p class="p-0 max-w-md">
                 This site uses no tracking or cookies, 
                 other than privacy-respecting, 
-                GDPR-compliant analytics via 
+                GDPR-compliant analytics via
                 <a href="https://plausible.io" class="text-accent-1 underline">Plausible</a>.
-            </p>
+            </p> -->
             <p>Made with 
-                <a href="https://kit.svelte.dev" class="text-accent-1 underline">SvelteKit</a>
+                <a href="https://kit.svelte.dev" class="text-accent-1 underline" rel="noreferrer">SvelteKit</a>
                 , hosted on 
-                <a href="https://www.cloudflare.com" class="text-accent-1 underline">Cloudflare</a>
+                <a href="https://vercel.com" class="text-accent-1 underline" rel="noreferrer">Vercel</a>
                 .</p>
         </div>
     </div>

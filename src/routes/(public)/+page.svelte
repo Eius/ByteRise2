@@ -6,19 +6,24 @@
 	import NormalArticle from "$lib/components/articles/NormalArticle.svelte";
 	import TagContainer from "$lib/components/articles/TagContainer.svelte";
 	import Divider from "$lib/components/articles/partials/Divider.svelte";
+	import type { PageData } from "./$types";
 
-    import {postList} from "$lib/data/Posts";
+    export let data: PageData;
+    const {articles} = data;
+
+    console.log(articles);
+
 </script>
 
 <div class="container">
     <div class="grid grid-cols-1 lg:grid-cols-3 py-10 md:py-16 lg:py-22 lg:gap-10">
         <div class="flex flex-col col-span-1 md:col-span-2">
-            {#each postList as post, index}
+            {#each articles as article, index}
                 {#if index === 0}
-                    <BigArticle postData={post} />
+                    <BigArticle postData={article} />
                 {:else}
                     <Divider />
-                    <NormalArticle postData={post} />
+                    <NormalArticle postData={article} />
                 {/if}
             {/each}
         </div>

@@ -6,7 +6,9 @@ const config = {
 	preprocess: sveltePreprocess(),
 
 	kit: {
-		adapter: adapter()
+		adapter: adapter({
+			runtime: 'nodejs18.x',
+		  }),
 	}
 };
 

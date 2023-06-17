@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { PostMeta } from '$lib/interfaces/postInterface';
+	import type { PostMeta } from '$lib/interfaces/Article';
 	import Icon from '@iconify/svelte';
 	export let meta: PostMeta;
 	let { pubDate, tags } = meta;
