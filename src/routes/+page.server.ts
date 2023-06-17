@@ -1,7 +1,6 @@
 import type { PageServerLoad } from './$types';
 import { db } from "$lib/firebase/firebase.server";
 import type { Article } from "$lib/interfaces/Article";
-import { Timestamp } from 'firebase-admin/firestore';
 
 
 export const load: PageServerLoad = async ({ params }) => {

@@ -11,8 +11,6 @@
     export let data: PageData;
     const {articles} = data;
 
-    console.log(articles);
-
 </script>
 
 <div class="container">

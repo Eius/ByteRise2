@@ -8,6 +8,15 @@ export interface Article {
     publishDate: Date,
 }
 
+export interface ArticleDetail {
+    title: string,
+    content: string,
+    tags: string[],
+    thumbnail: string,
+    author: string,
+    publishDate: Date,
+}
+
 export interface PostMeta {
     pubDate: string,
     tags: string[]

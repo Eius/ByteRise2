@@ -2,8 +2,22 @@
 	/* CSS */
 	import "../app.css";
 
-    /* Other */
+    /* Fonts */
 
+	/* Components */
+	import Header from "$lib/components/header/Header.svelte";
 </script>
 
-<slot />
+<svelte:head>
+	<title>ByteRise | Join the ByteSide</title>
+</svelte:head>
+
+<div class="app min-h-[200vh] flex flex-col bg-gradient-to-bl from-base-200 to-base-100">
+    <Header />
+	<main class="flex-grow">
+		<slot />
+	</main>
+</div>
+
+<style lang="postcss">
+</style>

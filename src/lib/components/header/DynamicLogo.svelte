@@ -26,8 +26,8 @@
     onDestroy(() => {
       clearTimeout(timeout);
     });
-  </script>
+</script>
   
-  <h1 class="text-center text-white font-logo white-nowrap">
-    <a href="/" class="tracking-wider">{displayText}</a>
-  </h1>
+<a href="/" class="tracking-wider text-secondary-focus text-center text-5xl font-logo white-nowrap btn btn-ghost">
+  {displayText}‎
+</a>

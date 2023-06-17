@@ -13,25 +13,6 @@ export default {
         '2xl': '16rem',
       }
     },
-    colors: {
-      "primary": "#181818",
-      "black": "#000000",
-      "white": "#F2F2F2",
-      "accent": {
-        "1": "#F05D23",
-      },
-      "gray": {
-        "100": "#f8f9fa",
-        "200": "#e9ecef",
-        "300": "#dee2e6",
-        "400": "#ced4da",
-        "500": "#adb5bd",
-        "600": "#6c757d",
-        "700": "#495057",
-        "800": "#343a40",
-        "900": "#212529",
-      },
-    },
     fontFamily: {
       "logo": ["vt323", "ui-sans-serif", "system-ui", "-apple-system"],
       "title": ["Figtree", "ui-sans-serif", "system-ui", "-apple-system"],
@@ -46,6 +27,24 @@ export default {
     },
     extend: {},
   },
-  plugins: [],
+  daisyui: {
+    themes: [
+      "night",
+      {
+        byterise: {
+          "primary": "#3abff8",
+          "secondary": "#828df8",
+          "accent": "#f471b5",
+          "neutral": "#1d283a",
+          "base-100": "#0f1729",
+          "info": "#0ca6e9",
+          "success": "#2bd4bd",
+          "warning": "#f4c152",
+          "error": "#fb6f84",
+        }
+      }
+    ],
+  },
+  plugins: [require('daisyui')],
 }
 

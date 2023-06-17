@@ -2,7 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    background-color: transparent !important;
+}
+
 .container-fluid {
-    @apply px-4;
+    @apply w-full;
+    @apply px-8;
     @apply mx-auto;
 }
