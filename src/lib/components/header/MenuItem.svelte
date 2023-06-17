@@ -8,7 +8,7 @@
 
 <li class="">
     <a data-sveltekit-noscroll href={item.href} 
-    class="relative btn btn-ghost btn-sm
+    class="relative uppercase text-sm hover:text-secondary-focus
     {isActive ? "after:w-1/2 before:w-1/2" : "after:w-0 before:w-0"} pseudo px-3 py-2 
     {isActive ? "text-secondary-focus" : "text-base-content"} 
     transition-all duration-200">
