@@ -2,6 +2,7 @@
 	import type { Article } from "$lib/interfaces/Article";
     import { onMount } from "svelte";
 	import { fly } from "svelte/transition";
+    import { adblockerEnabled } from "$lib/stores/adblockerStore";
 
     export let articles: Article[];
 
@@ -15,7 +16,7 @@
 <div class="grid grid-cols-3 gap-x-7 gap-y-11">
     {#if animate}
     {#each articles as article, index}
-        {#if index === 3}
+        {#if index === 3 && $adblockerEnabled === false}
         <article class="bg-neutral rounded-lg overflow-hidden transition-all duration-150 hover:scale-[103%] outline 
                         outline-1 outline-base-content/0 hover:outline-base-content" in:fly={{delay: index*75, y: -100, duration: 400}}>
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4564448067691193"

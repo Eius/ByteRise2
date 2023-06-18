@@ -10,6 +10,7 @@
     
 
     onMount(() => {
+        console.log(article?.content)
         const timeout = setTimeout(() => {
             animate = true;
             clearTimeout(timeout);
@@ -18,13 +19,17 @@
 </script>
 
 <div class="container flex flex-col gap-6">
-    {#if animate}
+    {#if animate && article}
         <img src={article?.thumbnail} alt="" class="w-3/4 mx-auto bg-base-100 rounded" in:fly={animationsSettings}>
         <h1 class="text-4xl text-center" in:fly={animationsSettings}>
             {article?.title}
         </h1>
-        <div in:fly={animationsSettings}>
-            {article?.content}
+        <div class="content" in:fly={animationsSettings}>
+            {@html `${article.content}`}
         </div>
     {/if}
 </div>
+
+<style class="postcss">
+    
+</style>

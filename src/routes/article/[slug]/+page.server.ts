@@ -1,6 +1,7 @@
 import type { PageServerLoad } from './$types';
 import { db } from '$lib/firebase/firebase.server';
-import type { Article, ArticleDetail } from '$lib/interfaces/Article';
+import type { ArticleDetail } from '$lib/interfaces/Article';
+import { compile } from "mdsvex";
 
 export const load: PageServerLoad = async ({ params }) => {
 	let { slug } = params;
@@ -10,9 +11,12 @@ export const load: PageServerLoad = async ({ params }) => {
         if(articleSnapshot.empty) { throw("Snapshot is empty") };
 		const data = articleSnapshot.docs[0].data();
 		if (!data.draft) {
+			const compiledContent = await compile(data.content)
+				.then(x => x?.code
+					.replace(/>{@html `<code class="language-/g, '><code class="language-'))
 			article = {
 				title: data.title,
-				content: data.content,
+				content: compiledContent ? compiledContent : "",
 				tags: data.tags,
 				thumbnail: data.thumbnail[0].downloadURL,
 				author: data._createdBy.displayName,
@@ -25,7 +29,7 @@ export const load: PageServerLoad = async ({ params }) => {
 	} catch (error) {
 		console.error('Error retrieving articles:', error);
 		return {
-			articles: []
+			article: undefined
 		};
 	}
 };

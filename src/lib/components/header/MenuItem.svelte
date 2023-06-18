@@ -7,7 +7,7 @@
 </script>
 
 <li class="">
-    <a data-sveltekit-noscroll href={item.href} 
+    <a data-sveltekit-noscroll data-sveltekit-preload-data="tap" href={item.href} 
     class="relative uppercase text-sm hover:text-secondary-focus
     {isActive ? "after:w-1/2 before:w-1/2" : "after:w-0 before:w-0"} pseudo px-3 py-2 
     {isActive ? "text-secondary-focus" : "text-base-content"} 
