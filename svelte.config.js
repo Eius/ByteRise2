@@ -13,7 +13,7 @@ const config = {
 	preprocess: sveltePreprocess(),
 	kit: {
 		adapter: adapter({
-			runtime: 'nodejs18.x',
+			runtime: 'edge',
 		  }),
 	}
 };
