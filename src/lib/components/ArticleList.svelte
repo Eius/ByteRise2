@@ -17,7 +17,7 @@
     {#each articles as article, index}
         {#if index === 3}
         <article class="bg-neutral rounded-lg overflow-hidden transition-all duration-150 hover:scale-[103%] outline 
-                        outline-1 outline-base-content/0 hover:outline-base-content">
+                        outline-1 outline-base-content/0 hover:outline-base-content" in:fly={{delay: index*75, y: -100, duration: 400}}>
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4564448067691193"
             crossorigin="anonymous"></script>
             <ins class="adsbygoogle"
