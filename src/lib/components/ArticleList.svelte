@@ -16,17 +16,20 @@
     {#if animate}
     {#each articles as article, index}
         {#if index === 3}
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4564448067691193"
-        crossorigin="anonymous"></script>
-        <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-format="fluid"
-        data-ad-layout-key="-63+cd-2-3r+ld"
-        data-ad-client="ca-pub-4564448067691193"
-        data-ad-slot="4735355033"></ins>
-        <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
+        <article class="bg-neutral rounded-lg overflow-hidden transition-all duration-150 hover:scale-[103%] outline 
+                        outline-1 outline-base-content/0 hover:outline-base-content">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4564448067691193"
+            crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-format="fluid"
+            data-ad-layout-key="-63+cd-2-3r+ld"
+            data-ad-client="ca-pub-4564448067691193"
+            data-ad-slot="4735355033"></ins>
+            <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </article>
         {/if}
         <article class="flex flex-col bg-neutral rounded-lg overflow-hidden transition-all duration-150 subpixel-antialiased 
                         hover:scale-[103%] outline outline-1 outline-base-content/0 hover:outline-base-content" in:fly={{delay: index*75, y: -100, duration: 400}}>
