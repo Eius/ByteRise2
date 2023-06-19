@@ -27,7 +27,7 @@
       clearTimeout(timeout);
     });
 </script>
-  
-<a href="/" class="-ml-6 tracking-wider text-secondary-focus text-center text-5xl font-logo white-nowrap btn btn-lg btn-ghost">
+ 
+<a href="/" class="tracking-wider text-secondary-focus text-center text-5xl font-logo white-nowrap transition-all duration-200">
   {displayText}‎
 </a>

@@ -5,9 +5,9 @@
 
     const menu = [
         {name: "Home", href: "/"},
-        {name: "SvelteKit", href: "/tag/SvelteKit"},
-        {name: "Blender", href: "/tag/Blender"},
-        {name: "Unreal Engine", href: "/tag/Unreal_Engine"}
+        {name: "SvelteKit", href: "/tag/sveltekit"},
+        {name: "Blender", href: "/tag/blender"},
+        {name: "Unreal Engine", href: "/tag/unreal_engine"}
     ]
 
 </script>

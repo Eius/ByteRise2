@@ -1,35 +1,47 @@
 <script lang="ts">
 	import { onMount } from "svelte";
-	import type { PageData } from "./$types";
 	import { fly } from "svelte/transition";
+	import type { PageData } from "./$types";
 
     export let data: PageData;
-    let { article } = data;
-    let animate = false;
-    const animationsSettings = {x: -100, duration: 500}
-    
 
-    onMount(() => {
-        console.log(article?.content)
-        const timeout = setTimeout(() => {
-            animate = true;
-            clearTimeout(timeout);
-        }, 200);
+    let animate = false;
+    const animationsSettings = {x: -100, duration: 300}
+    onMount(async () => {
+        animate = true;
     })
+    
 </script>
 
-<div class="container flex flex-col gap-6">
-    {#if animate && article}
-        <img src={article?.thumbnail} alt="" class="w-3/4 mx-auto bg-base-100 rounded" in:fly={animationsSettings}>
-        <h1 class="text-4xl text-center" in:fly={animationsSettings}>
-            {article?.title}
-        </h1>
-        <div class="content" in:fly={animationsSettings}>
-            {@html `${article.content}`}
-        </div>
+<svelte:head>
+    <title>{data.meta.title}</title>
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content={data.meta.title} />
+</svelte:head>
+
+<div class="container">
+    {#if animate}
+        <article class="flex flex-col gap-6" in:fly={animationsSettings}>
+            <img src={`/thumbnails/${data.meta.thumbnail}`} alt="" width="800" height="450" class="w-3/4 mx-auto bg-base-100 rounded">
+            <div class="p-4 flex gap-1 justify-center -ml-2">
+                {#each data.meta.tags as tag}
+                    <a href={`/tag/${tag}`} class="btn btn-outline btn-secondary btn-sm btn-neutral-content">
+                        #{tag.replace("_", " ")}
+                    </a>
+                {/each}
+            </div>
+            <h1 class="text-4xl text-center">
+                {data.meta.title}
+            </h1>
+            <div class="content">
+                <svelte:component this={data.content} />
+            </div>
+        </article>
     {/if}
 </div>
 
 <style class="postcss">
-    
+    :global(.content pre) {
+        @apply p-4;
+    }
 </style>
