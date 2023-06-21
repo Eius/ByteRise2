@@ -13,7 +13,7 @@ async function getPosts(tag: string | null) {
 		if (file && typeof file === 'object' && 'metadata' in file && slug) {
 			const metadata = file.metadata as Omit<Article, 'slug'>
 			const post = { ...metadata, slug } satisfies Article
-			if(post.published && (!tag || post.tags.includes(tag))) {
+			if(post.published && (!tag || post.tags.map(t => t.toLowerCase()).includes(tag.toLowerCase()))) {
 				posts.push(post);
 			}
 		}

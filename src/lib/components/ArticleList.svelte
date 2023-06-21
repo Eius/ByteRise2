@@ -21,7 +21,7 @@
 
 </script>
 
-<div class="grid grid-cols-3 gap-x-7 gap-y-11">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-7 gap-y-11">
     {#if animate}
     {#each articles as article, index}
         <!-- {#if index === 3 && $adblockerEnabled === false}
@@ -48,10 +48,10 @@
             <section class="flex flex-col flex-grow font-sans">
                 <a href={`/article/${article.slug}`} class="px-4 pt-4 flex flex-col flex-grow gap-2">
                     <p class="text-sm text-neutral-content">{formatDate(article.date)}</p>
-                    <h6 class="text-lg text-white font-bold">{article.title}</h6>
+                    <h6 class="text-lg text-white font-title font-bold">{article.title}</h6>
                     <p class="text-sm text-neutral-content">{article.description}</p>
                 </a>
-                <div class="p-4 flex gap-1 items-end -ml-2">
+                <div class="p-4 flex gap-1 items-end">
                     {#each article.tags as tag}
                         <a href={`/tag/${tag}`} class="btn btn-outline btn-secondary btn-xs btn-neutral-content">#{tag.replace("_", " ")}</a>
                     {/each}

@@ -1,5 +1,4 @@
 export function formatDate(dateString: string): string {
-    const _date = new Date(dateString);
     const parts = dateString.split('.');
     const day = parseInt(parts[0], 10);
     const month = parseInt(parts[1], 10);

@@ -9,13 +9,13 @@ published: true
 ---
 
 <script>
-  import Counter from "$lib/components/custom/Counter.svelte"
+  import Counter from "$lib/components/custom/Counter.svelte";
 </script>
 
 ## Svelte
 
 Media inside the **static** folder is served from `/`.
-![Svelte](/favicon.ico)
+![Svelte](/test_upload.png)
 
 Huh
 # Test

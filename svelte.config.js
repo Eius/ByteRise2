@@ -2,7 +2,6 @@ import adapter from '@sveltejs/adapter-vercel';
 import sveltePreprocess from "svelte-preprocess";
 import { mdsvex, escapeSvelte } from 'mdsvex';
 import shiki from 'shiki';
-import rehypePrism from 'rehype-prism-plus'
 import remarkUnwrapImages from 'remark-unwrap-images';
 import remarkToc from 'remark-toc';
 import rehypeSlug from 'rehype-slug';

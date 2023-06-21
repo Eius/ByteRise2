@@ -33,15 +33,10 @@
             <h1 class="text-4xl text-center">
                 {data.meta.title}
             </h1>
-            <div class="content">
-                <svelte:component this={data.content} />
-            </div>
+            <svelte:component this={data.content} />
         </article>
     {/if}
 </div>
 
 <style class="postcss">
-    :global(.content pre) {
-        @apply p-4;
-    }
 </style>

@@ -6,6 +6,7 @@
 
 	/* Components */
 	import Header from "$lib/components/header/Header.svelte";
+	import MobileMenu from "$lib/components/header/MobileMenu.svelte";
 </script>
 
 <svelte:head>
@@ -14,8 +15,9 @@
 	<title>ByteRise | Join the ByteSide</title>
 </svelte:head>
 
-<div class="app min-h-screen flex flex-col bg-gradient-to-bl from-base-200 from-20% to-base-100">
-    <Header />
+<div class="relative app min-h-screen flex flex-col bg-gradient-to-bl from-base-200 from-20% to-base-100">
+	<MobileMenu />
+	<Header />
 	<main class="flex-grow">
 		<slot />
 	</main>
