@@ -4,8 +4,6 @@ import { json } from '@sveltejs/kit';
 const siteURL = 'https://byterise.dev'
 const siteTitle = 'ByteRise.dev'
 const siteDescription = 'Embark on a journey of creativity and skill! Unleash your imagination as we delve into game development, 3D modeling, web development, and beyond. Join our diverse tutorials and discover the secrets to bringing your ideas to life.'
-
-export const prerender = true
   
 export const GET = async ({fetch}) => {
     const response = await fetch('/api/articles')
