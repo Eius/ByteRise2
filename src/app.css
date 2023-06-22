@@ -16,3 +16,23 @@ html, body {
     @apply px-8;
     @apply mx-auto;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: theme("colors.neutral");
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: theme("colors.secondary-focus");
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
