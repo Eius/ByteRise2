@@ -10,7 +10,7 @@
         {name: "Unreal Engine", href: "/tag/unreal_engine", icon: "simple-icons:unrealengine"}
     ]
 
-    const randomTitle = [
+    const randomTitles = [
         "Find your niche",
         "Pick your poison",
         "Choose your journey",
@@ -23,9 +23,24 @@
         "Blend with your palate",
         "Sync with your desire"
     ]
-    let currentTitle = randomTitle[0];
+    let lastTitles: string[] = [];
+    let currentTitle = randomTitles[0];
+
+    function pickRandomTitle() {
+        const title = randomTitles[Math.floor(Math.random() * randomTitles.length)];
+        if(lastTitles.includes(title)) {
+            pickRandomTitle();
+        } else {
+            currentTitle = title;
+            if(lastTitles.length >= 3) {
+                lastTitles.shift();
+            }
+            lastTitles.push(title);
+        }
+    }
+
     $: if($showMobileMenu === true) {
-        currentTitle = randomTitle[Math.floor(Math.random() * randomTitle.length)]
+        pickRandomTitle()
     }
 </script>
 

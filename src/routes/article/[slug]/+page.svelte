@@ -64,11 +64,11 @@
 
 <div class="fixed top-1/2 flex items-center rounded z-20 -translate-y-1/2 {openToc ? "right-0" : "-right-[280px]"} transition-all">
     <button class="bg-neutral rounded-s-3xl -mr-2 " on:click={toggleToc}>
-        <Icon icon="ic:baseline-arrow-left" class="text-5xl -ml-1 {openToc ? "rotate-180" : ""}" />
+        <Icon icon="ic:baseline-arrow-left" class="text-5xl text-neutral-content -ml-1 {openToc ? "rotate-180" : ""}" />
     </button>
-    <div class="px-6 py-4 flex flex-col gap-6 bg-neutral h-fit max-h-[400px] w-[280px] flex-grow rounded-s overflow-y-scroll">
-        <h2 class="font-bold font-title uppercase">Table of contents</h2>
-        <ol class="flex flex-col gap-4 list-decimal list-inside" bind:this={tocDiv}>
+    <div class="px-6 py-7 flex flex-col gap-6 bg-neutral h-fit max-h-[400px] w-[280px] flex-grow rounded-s overflow-y-scroll">
+        <h2 class="text-neutral-content font-bold font-title uppercase">Table of contents</h2>
+        <ol class="text-neutral-content flex flex-col gap-4 list-decimal list-inside" bind:this={tocDiv}>
             {#each headings as {text, id}}
                 <li class="">
                     <a href={`#${id}`}>{text}</a>
