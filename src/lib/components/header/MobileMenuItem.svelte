@@ -9,7 +9,7 @@
 </script>
 
 <li>
-    <a href={item.href} on:click={() => {showMobileMenu.set(true)}}
+    <a href={item.href} on:click={() => {showMobileMenu.set(false)}}
     data-sveltekit-noscroll data-sveltekit-preload-data="hover"  
     class="text-sm group font-title font-medium hover:text-secondary-focus {isActive ? "text-secondary-focus" : ""}
     transition-all duration-200 flex items-center gap-2">

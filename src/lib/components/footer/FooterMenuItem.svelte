@@ -8,7 +8,7 @@
     <a data-sveltekit-noscroll data-sveltekit-preload-data="hover" 
     href={item.href} class="text-sm font-title font-medium flex items-center gap-2">
     <span>
-        <Icon icon={item.icon} class="text-3xl" />
+        <Icon icon={item.icon} class="text-2xl" />
     </span>
     {item.name}
     </a>

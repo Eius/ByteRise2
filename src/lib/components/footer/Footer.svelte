@@ -26,13 +26,13 @@
 
 <footer class="bg-neutral">
     <div class="py-4 grid gap-y-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 container">
-        <ul class="flex flex-col gap-4">
+        <ul class="flex flex-col gap-6">
             <li class="font-title font-semibold">Categories</li>
             {#each categories as item}
             <FooterMenuItem {item} />
             {/each}
         </ul>
-        <ul class="flex flex-col gap-4">
+        <ul class="flex flex-col gap-6">
             <li class="font-title font-semibold">Follow us</li>
             {#each follow as item}
             <FooterMenuItem {item} />
@@ -47,7 +47,6 @@
             </li>
         </ul>
         <div class="flex flex-col prose col-span-1 md:col-span-2 lg:col-span-1">
-            <p>©2023 ByteRise</p>
             <p>This site uses no tracking or cookies, other than privacy-respecting, GDPR-compliant analytics via 
                 <a class="text-secondary-focus" href="https://vercel.com">Vercel</a>.
             </p>
@@ -56,6 +55,7 @@
                 , hosted on 
                 <a class="text-secondary-focus" href="https://vercel.com">Vercel</a>
             </p>
+            <p>©2023 ByteRise</p>
         </div>
     </div>
 </footer>

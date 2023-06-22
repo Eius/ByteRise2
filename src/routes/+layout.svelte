@@ -35,10 +35,10 @@
 	<title>ByteRise | Join the ByteSide</title>
 </svelte:head>
 
-<div class="relative app min-h-screen flex flex-col bg-gradient-to-bl from-base-200 from-20% to-base-100">
+<div class="relative app bg-gradient-to-bl from-base-200 from-20% to-base-100">
 	<MobileMenu />
 	<Header />
-	<main class="flex-grow">
+	<main class="min-h-screen">
 		<slot />
 	</main>
 	<ScrollTopButton />
