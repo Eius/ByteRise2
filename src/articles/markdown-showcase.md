@@ -2,7 +2,7 @@
 title: Markdown Syntax Showcase
 thumbnail: placeholder_thumbnail.png
 description: Just click on me
-date: '19.6.2023'
+date: '2023-6-19'
 tags:
   - sveltekit
 published: true

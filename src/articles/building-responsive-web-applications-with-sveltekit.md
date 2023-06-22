@@ -2,7 +2,7 @@
 title: Building Responsive Web Applications with SvelteKit
 thumbnail: placeholder_thumbnail.png
 description: Craft responsive web apps using SvelteKit. Discover best practices, techniques, and principles for fluid user interfaces across devices.
-date: '19.6.2023'
+date: '2023-6-18'
 tags:
   - sveltekit
 published: true

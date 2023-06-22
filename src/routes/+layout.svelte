@@ -7,6 +7,22 @@
 	/* Components */
 	import Header from "$lib/components/header/Header.svelte";
 	import MobileMenu from "$lib/components/header/MobileMenu.svelte";
+	import ScrollTopButton from "$lib/components/ScrollTopButton.svelte";
+	import Footer from "$lib/components/footer/Footer.svelte";
+
+	/* Other */
+	import { onMount } from "svelte";
+	import { showScrollTop } from "$lib/stores/visibilityStore";
+
+	onMount(() => {
+		document.addEventListener("scroll", () => {
+			if(window.scrollY > 500) {
+				showScrollTop.set(true);
+			} else {
+				showScrollTop.set(false);
+			}
+		})
+	})
 </script>
 
 <svelte:head>
@@ -21,6 +37,8 @@
 	<main class="flex-grow">
 		<slot />
 	</main>
+	<ScrollTopButton />
+	<Footer />
 </div>
 
 <style lang="postcss">
