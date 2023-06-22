@@ -24,7 +24,7 @@
 
 </script>
 
-<footer class="bg-neutral">
+<footer class="bg-neutral border-t-2 border-neutral-focus">
     <div class="py-4 grid gap-y-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 container">
         <ul class="flex flex-col gap-6">
             <li class="font-title font-semibold">Categories</li>

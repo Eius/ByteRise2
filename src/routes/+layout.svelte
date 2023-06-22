@@ -21,6 +21,7 @@
 	onMount(() => {
 		document.addEventListener("scroll", () => {
 			if(window.scrollY > 500) {
+				console.log(window.scrollY);
 				showScrollTop.set(true);
 			} else {
 				showScrollTop.set(false);
