@@ -32,7 +32,7 @@
 <svelte:head>
 	<meta
 	http-equiv="Content-Security-Policy"
-	content="connect-src vitals.vercel-insights.com" />
+	content="default-src 'self'; img-src https://*; child-src 'none'; connect-src vitals.vercel-insights.com" />
 	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4564448067691193"
      crossorigin="anonymous"></script>
 	<title>ByteRise | Join the ByteSide</title>
