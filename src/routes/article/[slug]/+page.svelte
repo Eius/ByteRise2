@@ -68,10 +68,10 @@
     </button>
     <div class="px-6 py-7 flex flex-col gap-6 bg-neutral h-fit w-[280px] flex-grow rounded-s">
         <h2 class="text-neutral-content font-bold font-title uppercase">Table of contents</h2>
-        <ol class="pr-2 text-neutral-content flex flex-col gap-4 list-decimal list-inside" bind:this={tocDiv}>
+        <ol class="pr-2 text-neutral-content flex flex-col gap-3 list-decimal list-inside" bind:this={tocDiv}>
             {#each headings as {text, id}}
                 <li class="">
-                    <a href={`#${id}`}>{text}</a>
+                    <a class="py-1" href={`#${id}`}>{text}</a>
                 </li>
             {/each}
         </ol>
