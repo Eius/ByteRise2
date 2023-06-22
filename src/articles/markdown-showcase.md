@@ -13,11 +13,7 @@ published: true
   import TableOfContents from "$lib/components/custom/TableOfContents.svelte";
 </script>
 
-<TableOfContents>
-  ## Table of content
-</TableOfContents>
-
-## This is a level 2 heading.
+## SvelteKit's Component-centric Approach
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel massa vel ante fringilla tempus vitae in erat. Sed vel ligula hendrerit, facilisis libero sit amet, suscipit ligula. Aliquam at elit vitae nisl pulvinar eleifend sed nec mauris. Ut tincidunt, tellus eu volutpat semper, est erat fringilla nulla, eu posuere elit elit id odio. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque at lectus eu ex posuere ullamcorper. Nullam sodales iaculis ex, vitae feugiat odio elementum nec. Mauris suscipit arcu id sagittis tristique. Donec maximus auctor felis vitae interdum.
 
@@ -29,36 +25,36 @@ Phasellus ut arcu ac dolor luctus posuere non et magna. Vivamus ullamcorper ipsu
 
 Vestibulum maximus malesuada risus, non volutpat mauris feugiat nec. Morbi eget elit quis nisi dapibus consequat. Praesent nec dui t
 
-### This is a level 3 heading
+## Routing and Navigation in SvelteKit
 
 You can emphasize text using *italics* or **bold**.
 
-### Lists
+## Server-side Rendering with SvelteKit
 
 #### Unordered List
 - Item 1
 - Item 2
 - Item 3
 
-#### Ordered List
+## SvelteKit's File-based Routing System
 1. First item
 2. Second item
 3. Third item
 
-### Links
+## Styling and CSS in SvelteKit
 
 You can add links to [websites](https://www.example.com) or [local files](./path/to/file.md).
 
-### Images
+## SvelteKit's Built-in API Endpoints
 
-![Alt Text](/placeholder_thumbnail.png)
+![Alt Text](test_upload.png)
 
-### Blockquotes
+## Managing State in SvelteKit Applications
 
 > This is a blockquote.
 > It can span multiple lines.
 
-### Code
+## SvelteKit's Dynamic Imports and Code Splitting
 
 Inline code can be written like `console.log('Hello, World!')`.
 

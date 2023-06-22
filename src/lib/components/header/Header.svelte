@@ -1,7 +1,7 @@
 <script lang="ts">
 	import DynamicLogo from "./DynamicLogo.svelte";
 	import MenuItem from "./MenuItem.svelte";
-	import { hideMobileMenu } from "$lib/stores/visibilityStore";
+	import { showMobileMenu } from "$lib/stores/visibilityStore";
 	import Icon from "@iconify/svelte";
 
     const menu = [
@@ -18,7 +18,7 @@
         <DynamicLogo />
     </div>
     <button on:click={() => {
-        hideMobileMenu.set(false);
+        showMobileMenu.set(true);
     }} class="block md:hidden">
         <Icon icon="ep:menu" class="text-3xl" />
     </button>

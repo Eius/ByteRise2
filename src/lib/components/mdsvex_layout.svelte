@@ -7,8 +7,4 @@
     
 </script>
 
-<div class="prose">
-    <slot>
-        
-    </slot>
-</div>
+<slot />

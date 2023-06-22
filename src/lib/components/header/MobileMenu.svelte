@@ -1,6 +1,6 @@
 <script lang="ts">
     import Icon from "@iconify/svelte";
-	import { hideMobileMenu } from "$lib/stores/visibilityStore";
+	import { showMobileMenu } from "$lib/stores/visibilityStore";
 	import MobileMenuItem from "./MobileMenuItem.svelte";
 
     const mobileMenuItems = [
@@ -24,22 +24,22 @@
         "Sync with your desire"
     ]
     let currentTitle = randomTitle[0];
-    $: if($hideMobileMenu === false) {
+    $: if($showMobileMenu === true) {
         currentTitle = randomTitle[Math.floor(Math.random() * randomTitle.length)]
     }
 </script>
 
-<div class:hidden={$hideMobileMenu} class="fixed md:hidden left-0 right-0 bottom-0 top-0 bg-base-200/80 z-30">
+<div class:hidden={!$showMobileMenu} class="fixed md:hidden left-0 right-0 bottom-0 top-0 bg-base-200/80 z-30">
 
 </div>
-<div class="{$hideMobileMenu ? "translate-x-full" : "translate-x-0"} 
+<div class="{$showMobileMenu ? "translate-x-0" : "translate-x-full"} 
             px-8 py-6 flex flex-col gap-6 md:hidden transition-transform z-40
             fixed top-0 bottom-0 right-0 w-[320px] h-full bg-base-100">
     <div class="flex justify-between items-center">
         <p class="font-title font-bold uppercase">
             {currentTitle}
         </p>
-        <button on:click={() => {hideMobileMenu.set(true)}}>
+        <button on:click={() => {showMobileMenu.set(false)}}>
             <Icon icon="ic:baseline-close" class="text-3xl" />
         </button>
     </div>

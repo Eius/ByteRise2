@@ -1,6 +1,6 @@
 <script lang="ts">
     import {page} from "$app/stores";
-	import { hideMobileMenu } from "$lib/stores/visibilityStore";
+	import { showMobileMenu } from "$lib/stores/visibilityStore";
 	import Icon from "@iconify/svelte";
 
     export let item: {name: string, href: string, icon: string};
@@ -9,7 +9,7 @@
 </script>
 
 <li>
-    <a href={item.href} on:click={() => {hideMobileMenu.set(true)}}
+    <a href={item.href} on:click={() => {showMobileMenu.set(true)}}
     data-sveltekit-noscroll data-sveltekit-preload-data="hover"  
     class="text-sm group font-title font-medium hover:text-secondary-focus {isActive ? "text-secondary-focus" : ""}
     transition-all duration-200 flex items-center gap-2">
