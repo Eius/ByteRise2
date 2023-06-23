@@ -10,7 +10,6 @@ published: true
 
 <script>
   import Counter from "$lib/components/custom/Counter.svelte";
-  import TableOfContents from "$lib/components/custom/TableOfContents.svelte";
 </script>
 
 ## SvelteKit's Component-centric Approach

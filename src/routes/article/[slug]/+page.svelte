@@ -5,46 +5,29 @@
 	import Icon from "@iconify/svelte";
 	import { shareWebsite } from "$lib/utils/utils";
     import { page } from "$app/stores";
+	import TableOfContents from "$lib/components/TableOfContents.svelte";
 
     export let data: PageData;
-    
+
+    let contentDiv: HTMLElement;
     let animate = false;
     const animationsSettings = {x: -100, duration: 300}
     
     let shareData: ShareData = {
-        url: `https://www.byterise.dev/article/${$page.params.slug}`
-    }
-
-    let tocDiv: HTMLElement;
-    let contentDiv: HTMLElement;
-    let openToc = false;
-    let headings: {text: string | null, id: string}[] = []; 
-
-    $: if(contentDiv && tocDiv) {
-        headings = [];
-        contentDiv.querySelectorAll("h2").forEach((heading) => {
-            if(heading instanceof HTMLHeadingElement) {
-                const text = heading.textContent;
-                const id = heading.id;
-                headings.push({text: text, id: id});
-            }
-        })
+        url: `https://byterise.dev/article/${$page.params.slug}`
     }
 
     onMount(() => {
         animate = true;
     })
 
-    function toggleToc() {
-        openToc = !openToc;
-    }
-
 </script>
 
 <svelte:head>
     <title>ByteRise | {data.meta.title}</title>
     <meta name="description" content="{data.meta.description}" />
-    
+    <link rel="canonical" href="https://byterise.dev/article/{$page.params.slug}" />
+
 	<!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
 	<meta property="og:url" content="https://byterise.dev/article/{$page.params.slug}">
@@ -63,6 +46,8 @@
 	<meta property="twitter:image:alt" content="ByteRise | {data.meta.title} thumbnail">
 </svelte:head>
 
+<TableOfContents {contentDiv} />
+
 <div class="py-16 container">
     {#if animate}
         <article class="flex flex-col prose mx-auto" in:fly={animationsSettings}>
@@ -71,7 +56,7 @@
                 {data.meta.title}
             </h1>
             <div class="p-4 flex gap-1 justify-center -ml-2">
-                <button class="btn btn-outline btn-secondary btn-sm">
+                <button class="btn btn-outline btn-secondary btn-sm" on:click={() => shareWebsite(shareData)}>
                     <Icon icon="majesticons:share" class="text-xl" />
                     Share
                 </button>
@@ -96,19 +81,5 @@
     {/if}
 </div>
 
-<div class="fixed top-1/2 flex items-center rounded z-20 -translate-y-1/2 {openToc ? "right-0" : "-right-[280px]"} transition-all">
-    <button class="bg-neutral rounded-s-3xl -mr-0.5 z-40 border-2 border-r-0 border-neutral-focus" on:click={toggleToc}>
-        <Icon icon="ic:baseline-arrow-left" class="text-5xl text-neutral-content -ml-1 {openToc ? "rotate-180" : ""}" />
-    </button>
-    <div class="px-6 py-7 flex flex-col gap-6 bg-neutral h-fit w-[280px] flex-grow rounded-s z-30 border-2 border-r-0 border-neutral-focus">
-        <h2 class="text-neutral-content font-bold font-title uppercase">Table of contents</h2>
-        <ol class="pr-2 text-neutral-content flex flex-col gap-3 list-decimal list-inside" bind:this={tocDiv}>
-            {#each headings as {text, id}}
-                <li class="">
-                    <a class="py-1" href={`#${id}`}>{text}</a>
-                </li>
-            {/each}
-        </ol>
-    </div>
-</div>
+
 

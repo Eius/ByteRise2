@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { PageData } from "./$types";
     import ArticleList from "$lib/components/ArticleList.svelte";
+	import { page } from "$app/stores";
 
     export let data: PageData;
     $: articles = data.articles;
@@ -11,6 +12,7 @@
      crossorigin="anonymous"></script>
 	<title>ByteRise | Join the ByteSide</title>
 	<meta name="application-name" content="ByteRise" />
+    <link rel="canonical" href="https://byterise.dev/{$page.params.slug}" />
 	<meta name="description" content="Embark on a journey of creativity and skill! Unleash your imagination as we delve into game development, 3D modeling, web development, and beyond. Join our diverse tutorials and discover the secrets to bringing your ideas to life." />
 
 	<!-- Open Graph / Facebook -->
