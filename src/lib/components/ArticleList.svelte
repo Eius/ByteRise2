@@ -36,12 +36,12 @@
 </script>
 
 {#if animate}
-<div class="pt-4 pb-8 grid grid-cols-3 gap-x-7" in:fly={{y: 100, duration: 400}}>
-    <div class="form-control w-full max-w-xs">
+<div class="pt-4 pb-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-7" in:fly={{y: 100, duration: 400}}>
+    <div class="form-control w-full">
         <label for="search" class="label">
           <span class="label-text">Looking for something specific?</span>
         </label>
-        <input name="search" type="text" placeholder="Search..." bind:value={searchQuery} class="input input-bordered w-full max-w-xs" />
+        <input maxlength=20 autocomplete="off" name="search" type="search" placeholder="Search..." bind:value={searchQuery} class="input input-bordered w-full" />
       </div>
 </div>
 {#if filteredArticles.length > 0}
