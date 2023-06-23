@@ -4,6 +4,7 @@
 	import type { PageData } from "./$types";
 	import Icon from "@iconify/svelte";
 	import { shareWebsite } from "$lib/utils/utils";
+    import { page } from "$app/stores";
 
     export let data: PageData;
     
@@ -13,7 +14,7 @@
     let shareData: ShareData = {
         title: data.meta.title,
         text: data.meta.description,
-        url: `https://www.byterise.dev/article/${data.meta.slug}`
+        url: `https://www.byterise.dev/article/${$page.params.slug}`
     }
 
     let tocDiv: HTMLElement;
