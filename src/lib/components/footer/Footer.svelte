@@ -25,7 +25,7 @@
 </script>
 
 <footer class="bg-neutral border-t-2 border-neutral-focus">
-    <div class="py-4 grid gap-y-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 container">
+    <div class="py-12 grid gap-y-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 container">
         <ul class="flex flex-col gap-6">
             <li class="font-title font-semibold">Categories</li>
             {#each categories as item}
@@ -46,7 +46,7 @@
                 </p>
             </li>
         </ul>
-        <div class="flex flex-col prose col-span-1 md:col-span-2 lg:col-span-1">
+        <div class="flex flex-col gap-8 max-w-prose col-span-1 md:col-span-2 lg:col-span-1">
             <p>This site uses no tracking or cookies, other than privacy-respecting, GDPR-compliant analytics via 
                 <a class="text-secondary-focus" href="https://vercel.com">Vercel</a>.
             </p>

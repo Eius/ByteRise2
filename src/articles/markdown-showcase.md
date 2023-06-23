@@ -1,6 +1,6 @@
 ---
 title: Markdown Syntax Showcase
-thumbnail: placeholder_thumbnail.png
+thumbnail: placeholder_thumbnail.jpg
 description: Just click on me
 date: '2023-6-19'
 tags:
@@ -47,7 +47,7 @@ You can add links to [websites](https://www.example.com) or [local files](./path
 
 ## SvelteKit's Built-in API Endpoints
 
-![Alt Text](test_upload.png)
+![Alt Text](test_upload.jpg)
 
 ## Managing State in SvelteKit Applications
 

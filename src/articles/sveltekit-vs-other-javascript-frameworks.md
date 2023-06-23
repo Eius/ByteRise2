@@ -1,6 +1,6 @@
 ---
-thumbnail: placeholder_thumbnail.png
 title: SvelteKit vs. Other JavaScript Frameworks
+thumbnail: placeholder_thumbnail.jpg
 description: Compare SvelteKit with popular JavaScript frameworks to make informed decisions for your web projects. Explore features, performance, workflows, and community support.
 date: '2023-6-19'
 tags:

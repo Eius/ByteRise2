@@ -43,7 +43,7 @@
         <article class="flex flex-col bg-neutral rounded-lg overflow-hidden transition-all duration-150 subpixel-antialiased 
                         hover:scale-[103%] outline outline-1 outline-base-content/0 hover:outline-base-content" in:fly={{delay: index*75, y: -100, duration: 400}}>
             <a data-sveltekit-preload-data="hover" href={`/article/${article.slug}`}>
-                <img src={`/thumbnails/${article.thumbnail}`} alt={article.title} class="aspect-video bg-base-100" width="800" height="450">
+                <img src={`/thumbnails/${article.thumbnail}`} alt={article.title} class="aspect-video bg-base-100" width="1080" height="608">
             </a>
             <section class="flex flex-col flex-grow font-sans">
                 <a href={`/article/${article.slug}`} class="px-4 pt-4 flex flex-col flex-grow gap-2">
