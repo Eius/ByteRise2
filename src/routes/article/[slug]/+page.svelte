@@ -12,8 +12,8 @@
     const animationsSettings = {x: -100, duration: 300}
     
     let shareData: ShareData = {
-        title: data.meta.title,
-        text: data.meta.description,
+        title: undefined,
+        text: undefined,
         url: `https://www.byterise.dev/article/${$page.params.slug}`
     }
 
