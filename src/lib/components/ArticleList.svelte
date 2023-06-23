@@ -18,12 +18,17 @@
         }, 1)
     })
 
+    let searchTimer: NodeJS.Timeout;
+
     $: {
         if(searchQuery) {
-            filteredArticles = articles.filter((article) => article.title.toLowerCase().includes(searchQuery.toLowerCase()));
-            if(filteredArticles.length <= 0) {
-                filteredArticles = articles.filter((article) => article.description.toLowerCase().includes(searchQuery.toLowerCase()));
-            }
+            clearTimeout(searchTimer);
+            searchTimer = setTimeout(() => {
+                const filteredTitles = articles.filter((article) => article.title.toLowerCase().includes(searchQuery.toLowerCase()));
+                const filteredDesc = articles.filter((article) => article.description.toLowerCase().includes(searchQuery.toLowerCase()));
+                const merged = filteredTitles.concat(filteredDesc);
+                filteredArticles = Array.from(new Set(merged));
+            }, 250)
         } else {
             filteredArticles = [...articles];
         }
@@ -36,12 +41,13 @@
 </script>
 
 {#if animate}
-<div class="pt-4 pb-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-7" in:fly={{y: 100, duration: 400}}>
+<div in:fly={{y: 100, duration: 400}} class="pt-4 pb-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-7">
     <div class="form-control w-full">
         <label for="search" class="label">
           <span class="label-text">Looking for something specific?</span>
-        </label>
-        <input maxlength=20 autocomplete="off" name="search" type="search" placeholder="Search..." bind:value={searchQuery} class="input input-bordered w-full" />
+        </label>    
+        <input maxlength=20 autocomplete="off" name="search" type="search" placeholder="Search..." bind:value={searchQuery} 
+        class="input input-bordered w-full" />
       </div>
 </div>
 {#if filteredArticles.length > 0}

@@ -8,8 +8,6 @@
 </script>
 
 <svelte:head>
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4564448067691193"
-     crossorigin="anonymous"></script>
 	<title>ByteRise | Join the ByteSide</title>
 	<link rel="canonical" href="https://byterise.dev" />
 	<meta name="application-name" content="ByteRise" />
