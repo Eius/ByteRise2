@@ -1,12 +1,15 @@
 <script lang="ts">
 	import type { Article } from "$lib/interfaces/Article";
-    import { onDestroy, onMount } from "svelte";
+    import { onDestroy } from "svelte";
 	import { fly } from "svelte/transition";
     import { adblockerEnabled } from "$lib/stores/adblockerStore";
 	import { page } from "$app/stores";
 	import { formatDate } from "$lib/utils/utils";
+	import Icon from "@iconify/svelte";
 
     export let articles: Article[];
+    let searchQuery: string = "";
+    let filteredArticles: Article[] = [];
     let animate = false;
     const unsubsribe = page.subscribe(() => {
         animate = false;
@@ -15,15 +18,35 @@
         }, 1)
     })
 
+    $: {
+        if(searchQuery) {
+            filteredArticles = articles.filter((article) => article.title.toLowerCase().includes(searchQuery.toLowerCase()));
+            if(filteredArticles.length <= 0) {
+                filteredArticles = articles.filter((article) => article.description.toLowerCase().includes(searchQuery.toLowerCase()));
+            }
+        } else {
+            filteredArticles = [...articles];
+        }
+    }
+
     onDestroy(() => {
         unsubsribe();
     })
 
 </script>
 
+{#if animate}
+<div class="pt-4 pb-8 grid grid-cols-3 gap-x-7" in:fly={{y: 100, duration: 400}}>
+    <div class="form-control w-full max-w-xs">
+        <label for="search" class="label">
+          <span class="label-text">Looking for something specific?</span>
+        </label>
+        <input name="search" type="text" placeholder="Search..." bind:value={searchQuery} class="input input-bordered w-full max-w-xs" />
+      </div>
+</div>
+{#if filteredArticles.length > 0}
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-7 gap-y-11">
-    {#if animate}
-    {#each articles as article, index}
+    {#each filteredArticles as article, index}
         <!-- {#if index === 3 && $adblockerEnabled === false}
         <article class="bg-neutral rounded-lg overflow-hidden transition-all duration-150 hover:scale-[103%] outline 
                         outline-1 outline-base-content/0 hover:outline-base-content" in:fly={{delay: index*75, y: -100, duration: 400}}>
@@ -41,7 +64,7 @@
         </article>
         {/if} -->
         <article class="flex flex-col bg-neutral rounded-lg overflow-hidden transition-all duration-150 subpixel-antialiased 
-                        hover:scale-[103%] outline outline-1 outline-base-content/0 hover:outline-base-content" in:fly={{delay: index*75, y: -100, duration: 400}}>
+                        hover:scale-[103%] outline outline-1 outline-base-200 hover:outline-secondary-focus" in:fly={{delay: index*75, y: 100, duration: 400}}>
             <a data-sveltekit-preload-data="hover" href={`/article/${article.slug}`}>
                 <img src={`/thumbnails/${article.thumbnail}`} alt={article.title} class="aspect-video bg-base-100" width="1080" height="608">
             </a>
@@ -59,5 +82,13 @@
             </section>
         </article>
     {/each}
-    {/if}
 </div>
+{:else}
+    <div class="flex items-center justify-center gap-4" in:fly={{y: 100, duration: 400}}>
+        <span in:fly={{delay: 300, y: -100, duration: 400}}>
+            <Icon icon="mdi:spider-thread" class="text-secondary-focus text-6xl" />
+        </span>
+        <p>Ooops, looks like there's nothing here.</p>
+    </div>
+{/if}
+{/if}
