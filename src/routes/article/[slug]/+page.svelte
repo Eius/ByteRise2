@@ -12,8 +12,6 @@
     const animationsSettings = {x: -100, duration: 300}
     
     let shareData: ShareData = {
-        title: undefined,
-        text: undefined,
         url: `https://www.byterise.dev/article/${$page.params.slug}`
     }
 
@@ -44,15 +42,31 @@
 </script>
 
 <svelte:head>
-    <title>{data.meta.title}</title>
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content={data.meta.title} />
+    <title>ByteRise | {data.meta.title}</title>
+    <meta name="description" content="{data.meta.description}" />
+    
+	<!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+	<meta property="og:url" content="https://byterise.dev/article/{$page.params.slug}">
+	<meta property="og:title" content="ByteRise | {data.meta.title}">
+	<meta property="og:description" content="{data.meta.description}">
+	<meta property="og:image" content="https://byterise.dev/thumbnails/{data.meta.thumbnail}">
+	<meta property="og:image:width" content="1080" />
+	<meta property="og:image:height" content="608" />
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary">
+	<meta property="og:url" content="https://byterise.dev/article/{$page.params.slug}">
+	<meta property="og:title" content="ByteRise | {data.meta.title}">
+	<meta property="twitter:description" content="{data.meta.description}">
+	<meta property="twitter:image" content="https://byterise.dev/thumbnails/{data.meta.thumbnail}">
+	<meta property="twitter:image:alt" content="ByteRise | {data.meta.title} thumbnail">
 </svelte:head>
 
 <div class="py-16 container">
     {#if animate}
         <article class="flex flex-col prose mx-auto" in:fly={animationsSettings}>
-            <img src={`/thumbnails/${data.meta.thumbnail}`} alt="" width="800" height="450" class="w-full mx-auto bg-base-100 rounded">
+            <img src={`/thumbnails/${data.meta.thumbnail}`} alt="" width="1080" height="608" class="w-full mx-auto bg-base-100 rounded">
             <h1 class="text-4xl text-center">
                 {data.meta.title}
             </h1>
