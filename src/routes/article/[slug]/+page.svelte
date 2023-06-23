@@ -3,12 +3,19 @@
 	import { fly } from "svelte/transition";
 	import type { PageData } from "./$types";
 	import Icon from "@iconify/svelte";
+	import { shareWebsite } from "$lib/utils/utils";
 
     export let data: PageData;
     
     let animate = false;
     const animationsSettings = {x: -100, duration: 300}
     
+    let shareData: ShareData = {
+        title: data.meta.title,
+        text: data.meta.description,
+        url: `https://www.byterise.dev/article/${data.meta.slug}`
+    }
+
     let tocDiv: HTMLElement;
     let contentDiv: HTMLElement;
     let openToc = false;
@@ -43,20 +50,32 @@
 
 <div class="py-16 container">
     {#if animate}
-        <article class="flex flex-col gap-6 prose mx-auto" in:fly={animationsSettings}>
+        <article class="flex flex-col prose mx-auto" in:fly={animationsSettings}>
             <img src={`/thumbnails/${data.meta.thumbnail}`} alt="" width="800" height="450" class="w-full mx-auto bg-base-100 rounded">
             <h1 class="text-4xl text-center">
                 {data.meta.title}
             </h1>
             <div class="p-4 flex gap-1 justify-center -ml-2">
+                <button class="btn btn-outline btn-secondary btn-sm">
+                    <Icon icon="majesticons:share" class="text-xl" />
+                    Share
+                </button>
                 {#each data.meta.tags as tag}
-                    <a href={`/tag/${tag}`} class="btn btn-outline btn-secondary btn-sm btn-neutral-content">
+                    <a href={`/tag/${tag}`} class="btn btn-outline btn-secondary btn-sm">
                         #{tag.replace("_", " ")}
                     </a>
                 {/each}
             </div>
             <div bind:this={contentDiv}>
                 <svelte:component this={data.content} />
+            </div>
+            <div class="flex flex-col items-center">
+                <p class="mt-0">
+                    Liked the article? 
+                </p>
+                <button on:click={() => {shareWebsite(shareData)}} class="btn btn-sm btn-wide btn-outline btn-secondary mx-auto">
+                    Share it!
+                </button>
             </div>
         </article>
     {/if}
