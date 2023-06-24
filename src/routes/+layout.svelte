@@ -12,9 +12,10 @@
 
 	/* Other */
 	import { onMount } from "svelte";
-	import { showScrollTop } from "$lib/stores/visibilityStore";
+	import { showMobileMenu, showScrollTop } from "$lib/stores/visibilityStore";
 	import { dev } from '$app/environment';
 	import { inject } from '@vercel/analytics';
+	import { beforeNavigate } from "$app/navigation";
 	
 	inject({ mode: dev ? 'development' : 'production' });
 
@@ -26,6 +27,10 @@
 				showScrollTop.set(false);
 			}
 		})
+	})
+
+	beforeNavigate(() => {
+		showMobileMenu.set(false);
 	})
 </script>
 
