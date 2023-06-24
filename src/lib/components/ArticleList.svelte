@@ -41,7 +41,7 @@
 </script>
 
 {#if animate}
-<div in:fly={{y: 100, duration: 400}} class="pt-4 pb-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-7">
+<div in:fly={{y: 100, duration: 400}} class="py-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-7">
     <div class="form-control w-full">
         <label for="search" class="label">
           <span class="label-text">Looking for something specific?</span>
@@ -74,7 +74,7 @@
             <a data-sveltekit-preload-data="hover" href={`/article/${article.slug}`}>
                 <img src={`/thumbnails/${article.thumbnail}`} alt={article.title} class="aspect-video bg-base-100" width="1080" height="608">
             </a>
-            <section class="flex flex-col flex-grow font-sans">
+            <section class="flex flex-col flex-grow font-sans"> 
                 <a href={`/article/${article.slug}`} class="px-4 pt-4 flex flex-col flex-grow gap-2">
                     <p class="text-sm text-neutral-content">{formatDate(article.date)}</p>
                     <h6 class="text-lg text-white font-title font-bold">{article.title}</h6>
@@ -82,7 +82,7 @@
                 </a>
                 <div class="p-4 flex gap-1 items-end">
                     {#each article.tags as tag}
-                        <a href={`/tag/${tag}`} class="btn btn-outline btn-secondary btn-xs btn-neutral-content">#{tag.replace("_", " ")}</a>
+                        <a href={`/category/${tag}`} class="btn btn-outline btn-secondary btn-xs btn-neutral-content">#{tag.replace("_", " ")}</a>
                     {/each}
                 </div>
             </section>

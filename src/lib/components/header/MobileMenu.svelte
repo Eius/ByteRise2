@@ -5,9 +5,9 @@
 
     const mobileMenuItems = [
         {name: "Home", href: "/", icon: "ic:sharp-home"},
-        {name: "SvelteKit", href: "/tag/sveltekit", icon: "simple-icons:svelte"},
-        {name: "Blender", href: "/tag/blender", icon: "material-symbols:blender-outline"},
-        {name: "Unreal Engine", href: "/tag/unreal_engine", icon: "simple-icons:unrealengine"}
+        {name: "SvelteKit", href: "/category/sveltekit", icon: "simple-icons:svelte"},
+        {name: "Blender", href: "/category/blender", icon: "material-symbols:blender-outline"},
+        {name: "Unreal Engine", href: "/category/unreal_engine", icon: "simple-icons:unrealengine"}
     ]
 
     const randomTitles = [

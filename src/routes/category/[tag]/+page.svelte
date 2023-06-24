@@ -33,6 +33,4 @@
 	<meta property="twitter:image:alt" content="ByteRise Blog | Technology and stuff">
 </svelte:head>
 
-<div class="py-16 container">
-    <ArticleList {articles} />
-</div>
+<ArticleList {articles} />

@@ -6,6 +6,9 @@
 	import { shareWebsite } from "$lib/utils/utils";
     import { page } from "$app/stores";
 	import TableOfContents from "$lib/components/TableOfContents.svelte";
+	import { breadcrumbStore } from "$lib/stores/breadcrumbStore";
+	import Breadcrumb from "$lib/components/Breadcrumb.svelte";
+	import { afterNavigate } from "$app/navigation";
 
     export let data: PageData;
 
@@ -19,6 +22,13 @@
 
     onMount(() => {
         animate = true;
+    })
+
+    afterNavigate(({from}) => {
+        breadcrumbStore.set({
+            name: from?.params?.tag || "Home",
+            href: from?.url.pathname || "/"
+        })
     })
 
 </script>
@@ -48,9 +58,10 @@
 
 <TableOfContents {contentDiv} />
 
-<div class="py-16 container">
+<div>
     {#if animate}
         <article class="flex flex-col prose mx-auto" in:fly={animationsSettings}>
+            <Breadcrumb />
             <img src={`/thumbnails/${data.meta.thumbnail}`} alt="" width="1080" height="608" class="w-full mx-auto bg-base-100 rounded">
             <h1 class="text-4xl text-center">
                 {data.meta.title}
@@ -61,7 +72,7 @@
                     Share
                 </button>
                 {#each data.meta.tags as tag}
-                    <a href={`/tag/${tag}`} class="btn btn-outline btn-secondary btn-sm">
+                    <a href={`/category/${tag}`} class="btn btn-outline btn-secondary btn-sm">
                         #{tag.replace("_", " ")}
                     </a>
                 {/each}

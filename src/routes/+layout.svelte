@@ -32,7 +32,7 @@
 <div class="relative app bg-gradient-to-bl from-base-200 from-20% to-base-100">
 	<MobileMenu />
 	<Header />
-	<main class="min-h-screen">
+	<main class="min-h-screen py-16 container">
 		<slot />
 	</main>
 	<ScrollTopButton />

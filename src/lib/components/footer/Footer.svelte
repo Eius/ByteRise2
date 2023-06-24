@@ -6,7 +6,7 @@
     const follow: {name: string, href: string, icon: string}[] = [
         {
             name: "RSS",
-            href: "/api/rss",
+            href: "/rss.xml",
             icon: "mdi:rss"
         },
         {
