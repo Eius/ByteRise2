@@ -13,11 +13,7 @@
 	/* Other */
 	import { onMount } from "svelte";
 	import { showMobileMenu, showScrollTop } from "$lib/stores/visibilityStore";
-	import { dev } from '$app/environment';
-	import { inject } from '@vercel/analytics';
 	import { beforeNavigate } from "$app/navigation";
-	
-	inject({ mode: dev ? 'development' : 'production' });
 
 	onMount(() => {
 		document.addEventListener("scroll", () => {
