@@ -48,12 +48,12 @@
         </ul>
         <div class="flex flex-col gap-8 max-w-prose col-span-1 md:col-span-2 lg:col-span-1">
             <p>This site uses no tracking or cookies, other than privacy-respecting, GDPR-compliant analytics via 
-                <a class="text-secondary-focus" href="https://vercel.com">Vercel</a>.
+                <a class="text-secondary-focus" href="https://plausible.io" target="_blank" rel="noreferrer">Plausible</a>.
             </p>
             <p>Made with 
-                <a class="text-secondary-focus" href="https://kit.svelte.dev">SvelteKit</a>
+                <a class="text-secondary-focus" href="https://kit.svelte.dev" target="_blank" rel="noreferrer">SvelteKit</a>
                 , hosted on 
-                <a class="text-secondary-focus" href="https://vercel.com">Vercel</a>
+                <a class="text-secondary-focus" href="https://vercel.com" target="_blank" rel="noreferrer">Vercel</a>
             </p>
             <p>©2023 ByteRise</p>
         </div>

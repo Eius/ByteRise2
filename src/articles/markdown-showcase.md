@@ -5,7 +5,7 @@ description: Just click on me
 date: '2023-6-19'
 tags:
   - sveltekit
-published: true
+published: false
 ---
 
 <script>
@@ -42,7 +42,7 @@ You can emphasize text using *italics* or **bold**.
 
 ## Styling and CSS in SvelteKit
 
-You can add links to [websites](https://www.example.com) or [local files](./path/to/file.md).
+You can add links to [websites](https://www.example.com) or [local files](/socials_thumbnail.jpg).
 
 ## SvelteKit's Built-in API Endpoints
 
