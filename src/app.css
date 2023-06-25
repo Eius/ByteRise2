@@ -36,3 +36,7 @@ html, body {
 ::-webkit-scrollbar-thumb:hover {
     background: theme("colors.secondary");
 }
+
+pre::-webkit-scrollbar {
+    height: 4px;
+}
