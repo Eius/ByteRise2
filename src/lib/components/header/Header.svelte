@@ -7,8 +7,8 @@
     const menu = [
         {name: "Home", href: "/"},
         {name: "SvelteKit", href: "/category/sveltekit"},
-        {name: "Blender", href: "/category/blender"},
-        {name: "Unreal Engine", href: "/category/unreal_engine"}
+        /* {name: "Blender", href: "/category/blender"},
+        {name: "Unreal Engine", href: "/category/unreal_engine"} */
     ]
 
 </script>

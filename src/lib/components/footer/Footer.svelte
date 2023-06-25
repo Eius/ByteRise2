@@ -18,8 +18,8 @@
 
     const categories: {name: string, href: string, icon: string}[] = [
         {name: "SvelteKit", href: "/tag/sveltekit", icon: "simple-icons:svelte"},
-        {name: "Blender", href: "/tag/blender", icon: "material-symbols:blender-outline"},
-        {name: "Unreal Engine", href: "/tag/unreal_engine", icon: "simple-icons:unrealengine"}
+        /* {name: "Blender", href: "/tag/blender", icon: "material-symbols:blender-outline"},
+        {name: "Unreal Engine", href: "/tag/unreal_engine", icon: "simple-icons:unrealengine"} */
     ]
 
 </script>

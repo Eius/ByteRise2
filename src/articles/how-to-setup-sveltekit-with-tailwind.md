@@ -9,6 +9,7 @@ published: false
 ---
 
 <script>
+  // TODO Add tailwind configuration section
 </script>
 
 Are you ready to dive into the exciting world of web development? With the dynamic duo of SvelteKit and Tailwind CSS, creating stunning and responsive web applications has never been more enjoyable. In this article, we'll take you on a personal journey to set up your very own SvelteKit project with Tailwind CSS.
@@ -29,15 +30,15 @@ During the installation process, you'll be presented with a few options to custo
 ```shell
 ┌  Welcome to SvelteKit!
 │
-◇  Which Svelte app template?
+•  Which Svelte app template?
 │  Skeleton project
-│  #enter to confirm
+│  # enter to confirm
 │
-◇  Add type checking with TypeScript?
+•  Add type checking with TypeScript?
 │  Yes, using TypeScript syntax
-│  #enter to confirm
+│  # enter to confirm
 │
-◇  Select additional options // 
+•  Select additional options // 
 │  Add ESLint for code linting, Add Prettier for code formatting
 │  # use arrow keys/space bar to select, enter to confirm
 │
@@ -117,7 +118,7 @@ One last thing before we're done! Go to **/src/routes/+layout.svelte** and make 
 </div>
 ```
 
-You're all set! However, you might still notice that your project is a blank canvas. But worry not, we're about to add some life and color to it.
+Now you're all set! However, you might still notice that your project is a blank canvas. But worry not, we're about to add some life and color to it.
 
 ## Creating a Simple Webpage
 
@@ -128,7 +129,7 @@ Open the **src/routes/+page.svelte** file in your project's directory and overwr
 #### +page.svelte
 ```svelte
 <script lang="ts">
-    let name = 'your-name';
+    let name: string = 'your-name';
 </script>
 
 <div class="min-h-screen bg-gray-300 p-4 text-center">
@@ -146,15 +147,21 @@ You can also bind Tailwind classes to your custom logic:
 #### +page.svelte
 ```svelte
 <script lang="ts">
-    let name = 'sveltekit';
+    let name: string = 'sveltekit';
+
+    function checkName(x: string): boolean {
+      const lowercaseX = x.toLowerCase();
+      const lowercaseName = name.toLowerCase();
+      return lowercaseX === lowercaseName;
+    }
 </script>
 
 <div class="min-h-screen bg-gray-300 p-4 text-center">
     <h1 class="text-3xl font-bold mb-4">
-        Hello, <span class:text-orange-500={name.toLowerCase() === "sveltekit"}>{ name }</span>!
+        Hello, <span class:text-orange-500={checkName("sveltekit")}>{ name }</span>!
     </h1>
     <p class="text-lg">This is a simple webpage built with SvelteKit and 
-        <span class="{name.toLowerCase() === "sveltekit" ? "text-blue-600 font-bold" : "text-red-500 font-light"}">
+        <span class="{checkName("sveltekit") ? "text-blue-600 font-bold" : "text-red-500 font-light"}">
             Tailwind CSS
         </span>.
     </p>
