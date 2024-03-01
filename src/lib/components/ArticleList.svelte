@@ -34,6 +34,16 @@
         }
     }
 
+    function getTitle(): string {
+        let pageTitle: string = "";
+        if($page.params.tag) {
+            pageTitle = $page.params.tag;
+        } else if($page.url.pathname === "/") {
+            pageTitle = "Home";
+        }
+        return pageTitle;
+    }
+
     onDestroy(() => {
         unsubsribe();
     })
@@ -41,6 +51,9 @@
 </script>
 
 {#if animate}
+<h2 class="pb-4 pl-1 text-xl uppercase" in:fly={{y: 100, duration: 400}}>
+    {`[ ${getTitle()} ]`}
+</h2>
 <div in:fly={{y: 100, duration: 400}} class="py-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-7">
     <div class="form-control w-full">
         <label for="search" class="label">
@@ -48,7 +61,7 @@
         </label>    
         <input maxlength=20 autocomplete="off" name="search" type="search" placeholder="Search..." bind:value={searchQuery} 
         class="input input-bordered w-full" />
-      </div>
+    </div>
 </div>
 {#if filteredArticles.length > 0}
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-7 gap-y-11">
@@ -71,11 +84,11 @@
         {/if} -->
         <article class="flex flex-col bg-neutral rounded-lg overflow-hidden transition-all duration-150 subpixel-antialiased 
                         hover:scale-[103%] outline outline-1 outline-base-200 hover:outline-secondary-focus" in:fly={{delay: index*75, y: 100, duration: 400}}>
-            <a data-sveltekit-preload-data="hover" href={`/article/${article.slug}`}>
+            <a data-sveltekit-noscroll data-sveltekit-preload-data="hover" href={`/article/${article.slug}`}>
                 <img src={`/thumbnails/${article.thumbnail}`} alt={article.title} class="aspect-video bg-base-100" width="1080" height="608">
             </a>
             <section class="flex flex-col flex-grow font-sans"> 
-                <a href={`/article/${article.slug}`} class="px-4 pt-4 flex flex-col flex-grow gap-2">
+                <a data-sveltekit-noscroll data-sveltekit-preload-data="hover" href={`/article/${article.slug}`} class="px-4 pt-4 flex flex-col flex-grow gap-2">
                     <p class="text-sm text-neutral-content">{formatDate(article.date)}</p>
                     <h6 class="text-lg text-white font-title font-bold">{article.title}</h6>
                     <p class="text-sm text-neutral-content">{article.description}</p>

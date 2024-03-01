@@ -1,6 +1,7 @@
 <script lang="ts">
     import { breadcrumbStore } from "$lib/stores/breadcrumbStore";
 	import Icon from "@iconify/svelte";
+    
 </script>
 
 
@@ -10,3 +11,4 @@
         {$breadcrumbStore.name}
     </span>
 </a>
+

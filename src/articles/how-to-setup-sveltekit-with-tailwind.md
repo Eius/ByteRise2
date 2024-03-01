@@ -1,11 +1,11 @@
 ---
 title: Building Beautiful Web Apps with SvelteKit and Tailwind CSS
 thumbnail: how-to-setup-sveltekit-with-tailwind.webp
-description: Discover the perfect combination of SvelteKit and Tailwind CSS to build visually stunning and responsive web apps. This step-by-step guide will help you set up your SvelteKit project with Tailwind CSS, empowering you to create captivating designs and streamline your development process. Unleash your creativity and take your web apps to the next level.
+description: Design captivating web apps with SvelteKit and Tailwind CSS. This guide shows you how to set up your project for stunning visuals and streamlined development.
 date: '2023-6-25'
 tags:
   - sveltekit
-published: false
+published: true
 ---
 
 <script>
@@ -38,7 +38,7 @@ During the installation process, you'll be presented with a few options to custo
 │  Yes, using TypeScript syntax
 │  # enter to confirm
 │
-•  Select additional options // 
+•  Select additional options 
 │  Add ESLint for code linting, Add Prettier for code formatting
 │  # use arrow keys/space bar to select, enter to confirm
 │

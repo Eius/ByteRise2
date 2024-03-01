@@ -13,7 +13,7 @@
 	/* Other */
 	import { onMount } from "svelte";
 	import { showMobileMenu, showScrollTop } from "$lib/stores/visibilityStore";
-	import { beforeNavigate } from "$app/navigation";
+	import { afterNavigate, beforeNavigate } from "$app/navigation";
 
 	onMount(() => {
 		document.addEventListener("scroll", () => {
@@ -27,6 +27,10 @@
 
 	beforeNavigate(() => {
 		showMobileMenu.set(false);
+	})
+
+	afterNavigate(() => {
+		window.scrollTo({top: 0, behavior: "instant"});
 	})
 </script>
 
